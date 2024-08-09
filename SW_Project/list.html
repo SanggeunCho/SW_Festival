@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="list.css">
+
+<html>
+    <head>
+        <title>List</title>
+        <script>
+            function updateTime(){
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = (now.getMonth() + 1).toString().padStart(2, '0'); // 월은 0부터 시작하므로 +1
+                const day = now.getDate().toString().padStart(2, '0');
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+                const milliseconds = Math.floor(now.getMilliseconds() / 100);
+                
+                const timeString = `${year}/${month}/${day} ${hours}:${minutes}:${seconds}:${milliseconds}`;
+                document.getElementById('current-time').innerText = `Server Time: ${timeString}`;
+            }
+
+            function loadClasses() {
+                // 예제 수업 데이터
+                const classes = [
+                { name: "Math 101", description: "Introduction to Mathematics" },
+                    { name: "History 201", description: "World History Overview" },
+                    { name: "Science 301", description: "Basic Principles of Science" },
+                    { name: "English 101", description: "Introduction to English" },
+                    { name: "Physics 101", description: "Basics of Physics" },
+                    { name: "Chemistry 101", description: "Introduction to Chemistry" },
+                    { name: "Biology 101", description: "Basics of Biology" },
+                    { name: "Art 101", description: "Introduction to Art" },
+                    { name: "Music 101", description: "Basics of Music" },
+                    { name: "Computer Science 101", description: "Introduction to CS" }
+                ];
+                
+                const classListDiv = document.getElementById('class-list');
+                
+                classes.forEach(classInfo => {
+                    const classDiv = document.createElement('div');
+                    classDiv.className = 'class-item';
+                    
+                    const className = document.createElement('h3');
+                    className.innerText = classInfo.name;
+                    
+                    const classDescription = document.createElement('p');
+                    classDescription.innerText = classInfo.description;
+                    
+                    classDiv.appendChild(className);
+                    classDiv.appendChild(classDescription);
+                    
+                    classListDiv.appendChild(classDiv);
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', (event) => {
+                updateTime();
+                loadClasses();
+                setInterval(updateTime, 100);
+            });
+
+        </script>
+    </head>
+    <body>
+        <h1>Class Picker</h1>
+        <div class="left" id="class-list">
+            <h2>Class List</h2>
+        </div>
+        <div class="right">
+            <form action="table.html">
+                <h2>Choosen Class</h2>
+                <span id="current-time" style="position: absolute; top: 10px; right: 10px;"></span>
+                <input type="submit" value="Make Table" style="position: absolute; bottom: 10px; right: 10px">
+            </form>
+        </div>
+    </body>
+</html>
