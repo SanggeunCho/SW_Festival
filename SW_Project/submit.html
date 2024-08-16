@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="submit.css">
+<html>
+    <head>
+        <title>SUBMIT</title>
+    </head>
+    <body>
+        <div class="Title">
+            <img src="Logo.png" alt="Image">
+            <div>
+                <h1>당신의 시간표는 백 개!</h1>
+                <h2>PLAN<img src="colon.png" alt="colon" class="small-colon">B</h2>
+            </div>
+            <!-- <span class="small-colon">ː</span> -->
+        </div>
+
+        <div class="submit-wrapper">
+            <form method="post" action="list.html" id="submit-form">
+                <input type="text" name="StudentNumber" placeholder="학번">
+                <div class="select-wrapper">
+                    <select name="Semester" id="semester">
+                        <option value="0">학기 수</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">more</option>
+                    </select>
+                </div>
+                
+                <div class="select-wrapper">
+                    <select name="Department" id="department">
+                        <option value="0">전공</option>
+                        <option value="법학부">법학부</option>
+                        <option value="경영경제학부">경영경제학부</option>
+                        <option value="상담심리사회복지학부">상담심리사회복지학부</option>
+                        <option value="공간환경시스템공학부">공간환경시스템공학부</option>
+                        <option value="전산전자공학부">전산전자공학부</option>
+                        <option value="ICT창업학부">ICT창업학부</option>
+                        <option value="콘텐츠융합디자인학부">콘텐츠융합디자인학부</option>
+                        <option value="기계제어공학부">기계제어공학부</option>
+                        <option value="국제어문학부">국제어문학부</option>
+                        <option value="생명과학부">생명과학부</option>
+                        <option value="커뮤니케이션학부">커뮤니케이션학부</option>
+                        <option value="AI융합교육원">AI융합교육원</option>
+                        <option value="GLS">GLS</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="시작하기">
+                <div class="login-keep">
+                    로그인 유지
+                    <input type="checkbox" id="LoginKeep" name="LoginKeep">
+                </div>
+            </form>
+        </div>
+
+        <div class="email">
+            <img src="email.png" alt="email" class="email-img">     slick.b.24.2@gmail.com
+        </div>
+    </body>
+</html>
