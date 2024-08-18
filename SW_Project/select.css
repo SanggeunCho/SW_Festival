@@ -1,0 +1,76 @@
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+.container{
+    width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    height: 915px;
+}
+
+.left{
+    width: 55%;
+    padding: 30px 60px 30px 150px;
+}
+
+.upper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+h2{
+    margin-top: 0;
+    color: #a4b9e7;
+    font-size: 35px;
+}
+
+.logo{
+    margin-right: 5px; /* 이미지 좌우 조절 */
+    margin-bottom: 25px; /* 이미지 상하 조절 */
+    width: auto;
+    height: 60px;
+    vertical-align: top;
+}
+
+.small-colon{
+    width: 25px !important;
+    height: auto !important;
+    vertical-align: top;
+}
+
+.time{
+    margin-top: 0;
+    background-color: rgb(232, 249, 255);
+    border: 2px solid rgb(231, 231, 231);
+    border-radius: 15px;
+    padding: 0px 50px;
+    line-height: 0;
+    display: inline-block;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.right{
+    width: 45%;
+    background-color: blue;
+    padding: 20px;
+}
+
+h5{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 500px;
+}

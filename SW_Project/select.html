@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="select.css">
+
+<html>
+    <haed>
+        <title>Select</title>
+        <script>
+            function updateTime(){
+                const days = ['일', '월', '화', '수', '목', '금', '토'];
+                
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = (now.getMonth() + 1).toString().padStart(2, '0'); // 월은 0부터 시작하므로 +1
+                const day = now.getDate().toString().padStart(2, '0');
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+                const milliseconds = Math.floor(now.getMilliseconds() / 100);
+                const dayOfWeek = days[now.getDay()];
+                
+                const timeString = `${year}년 ${month}월 ${day}일 (${dayOfWeek}) | 서버 시간 ${hours}:${minutes}:${seconds}:${milliseconds}`;
+                document.getElementById('current-time').innerText = `${timeString}`;
+            }
+
+            document.addEventListener('DOMContentLoaded', (event) => {
+                updateTime();
+                setInterval(updateTime, 100);
+            });
+
+        </script>
+    </haed>
+
+    <body>
+        <div class="container">
+            <div class="left">
+                <div class="upper">
+                    <div class="title">
+                        <img src="Logo.png" alt="Image" class="logo">
+                        <h2>PLAN<img src="colon.png" alt="colon" class="small-colon">B</h2>
+                    </div>
+                    <div class="time">
+                        <p id="current-time"></p>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <select name="search" id="search">
+                        <option value="0">과목명</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                    <input type="text" name="content" placeholder="검색">
+                    <button><img src="email.png" alt="email" class="email-img"></button>
+                </div>
+            </div>
+            <div class="right">
+                <h5>I am Right.</h5>
+            </div>
+        </div>
+    </body>
+</html>
