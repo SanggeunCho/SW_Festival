@@ -89,6 +89,7 @@ h2{
     font-weight: bold;
     background-color: #c7d7fa;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .login-keep{

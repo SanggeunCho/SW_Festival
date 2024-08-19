@@ -43,13 +43,15 @@
                     </div>
                 </div>
                 <div class="search-box">
-                    <select name="search" id="search">
-                        <option value="0">과목명</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                    </select>
-                    <input type="text" name="content" placeholder="검색">
-                    <button><img src="email.png" alt="email" class="email-img"></button>
+                    <form> <!--action="/search" method="GET"-->
+                        <select name="search" id="search">
+                            <option value="0">과목명</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <input type="text" name="content" placeholder="검색" size=63>
+                        <button type="submit"><img src="search.png" alt="email" class="email-img"></button>
+                    </form>
                 </div>
             </div>
             <div class="right">

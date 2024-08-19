@@ -30,6 +30,7 @@ body, html{
 
 h2{
     margin-top: 0;
+    margin-left: 10px;
     color: #a4b9e7;
     font-size: 35px;
 }
@@ -60,6 +61,58 @@ h2{
     font-size: 18px;
     font-weight: bold;
     color: #000;
+}
+
+.search-box{
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-box select, input, button{
+    border: none;
+    outline: none;
+    padding: 10px 20px 10px 10px;
+    height: 40px;
+
+    box-sizing: border-box;
+}
+
+.search-box select{
+    border-radius: 10px 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 30px; /* 화살표와 텍스트 간의 간격 확보 */
+    position: relative;
+    box-sizing: border-box;
+
+    background: url('select.png') no-repeat right 6px;
+}
+
+.search-box input{
+    font-size: 20px;
+}
+
+.search-box button{
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-box button img{
+    width: 45px;
+    height: auto;
+    vertical-align: middle;
 }
 
 .right{
