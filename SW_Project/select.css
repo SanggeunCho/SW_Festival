@@ -115,6 +115,24 @@ h2{
     vertical-align: middle;
 }
 
+.list{
+    margin: 10px 0 0 0;
+    padding: 5px 15px 5px 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    align-items: center;
+    height: 650px;
+}
+
+.contents{
+    margin: 10px 40px 0 0;
+    padding: 5px 15px 5px 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    align-items: center;
+    height: 150px;
+}
+
 .right{
     width: 45%;
     background-color: blue;
